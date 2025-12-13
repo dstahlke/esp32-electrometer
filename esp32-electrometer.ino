@@ -75,11 +75,18 @@ void setup()
     Wire.begin();
     Wire.setClock(1000000);
 
+    // Configure ADC.
     Wire.beginTransmission(0x40);
     Wire.write(uint8_t(0x40)); // WREG CONFIG
+    // bit 7:5 - MUX pos=AIN0 neg=AGND
+    // bit   4 - gain=1
+    // bit 3:2 - rate=20Hz
+    // bit   1 - continuous conversion mode
+    // bit   0 - external reference using REFP, REFN inputs
     Wire.write(uint8_t(0b01100011));
     Wire.endTransmission();
 
+    // Start ADC.
     Wire.beginTransmission(0x40);
     Wire.write(uint8_t(0x08)); // START
     Wire.endTransmission();
