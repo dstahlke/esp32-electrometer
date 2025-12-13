@@ -13,7 +13,7 @@ Now some numbers.  The smaller the feedback capacitor, the more sensitive it wil
 
 You can buy a 10GΩ resistor, but it's $20, not always in stock, and it's not gonna be available in surface mount.  If you touch it with greasy fingers, it might not be 10GΩ anymore.  Luckily, we can simulate a 10GΩ resistor using a T-network.  It seems too good to be true, but the math checks out and it works in practice.
 
-Some practicalties:
+Some practicalities:
 
 * With such a high value feedback resistor, we need an op-amp with low leakage current or we'll end up with an unacceptable offset in the output (possibly pushing it beyond the power rails).
 * The 100k resistor on the antenna doesn't do anything.  It's there to protect the op-amp from ESD and whatnot.
