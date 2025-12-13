@@ -11,7 +11,7 @@ We are holding the antenna at a constant voltage (Vref) and measuring how much c
 
 Now some numbers.  The smaller the feedback capacitor, the more sensitive it will be.  100pF is about perfect, making it sensitive enough to pick up anything above the noise floor.  For the feedback resistor, we need to decide how quickly we want the value to decay to zero.  A time constant of 1 second works well here.  Solving 100pF * R = 1 second gives us a value of 10 gigaohms.
 
-You can buy a 10GΩ resistor, but it's $20, not always in stock, and it's not gonna be available in surface mount.  If you touch it with greasy fingers, it might not be 10GΩ anymore.  Luckily, we can simulate a 10GΩ resistor using a T-network.  It seems too good to be true, but the math checks out and it works in practice.
+You can buy a 10GΩ resistor, but it's $20, not always in stock, and it's not gonna be available in surface mount.  If you touch it with greasy fingers, it might not be 10GΩ anymore.  Luckily, we can simulate a 10GΩ resistor using a [T-network](https://electronics.stackexchange.com/questions/333055/op-amp-with-t-network-in-the-feedback-path).  It seems too good to be true, but the math checks out and it works in practice.
 
 Some practicalities:
 
