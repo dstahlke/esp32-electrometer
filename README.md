@@ -52,3 +52,4 @@ You will also need to upload the assets for the web server:
     ~/.arduino15/packages/esp32/tools/mklittlefs/3.0.0-gnu12-dc7f933/mklittlefs -c ./data -p 256 -b 4096 -s $((0x160000)) spiffs.bin
     python3 ~/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py --chip esp32s2 --port "/dev/ttyACM0" --baud 921600  --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size detect $((0x290000)) spiffs.bin
 
+The web plot is based on [this project](https://www.donskytech.com/real-time-sensor-chart-display-of-sensor-readings-esp8266-esp32).
